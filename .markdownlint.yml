@@ -1,0 +1,7 @@
+bullet:
+  style: "dash"
+
+line_length: false
+
+headings:
+  allow_different_nesting: true

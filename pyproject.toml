@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "til"
+version = "0.0.1"
+description = ""
+authors = ["Dale-Kurt Murray <hello@dalekurtmurray>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mkdocs-git-revision-date-localized-plugin = "0.10.0"
+mkdocs-material = {git = "https://github.com/squidfunk/mkdocs-material.git", tag = "8.2.7"}
+mkdocs-graphviz = "1.5.3"
+mkdocs-minify-plugin = "^0.6.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]

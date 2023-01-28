@@ -1,0 +1,27 @@
+name: Build Code Base
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build Code Base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: false
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}

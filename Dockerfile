@@ -1,27 +1,30 @@
-FROM python:3.8-alpine
+FROM python:3.10.0-alpine3.14 as build
 
-ARG USER=1001
+SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
-RUN adduser -h /usr/src/mkdocs -D -u $USER mkdocs \
-&& apk add bash \
-&& apk add git 
+WORKDIR /build
 
-ENV PATH="${PATH}:/usr/src/mkdocs/.local/bin"
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 
-USER mkdocs
-RUN mkdir -p /usr/src/mkdocs/build
-WORKDIR /usr/src/mkdocs/build
+RUN apk -U upgrade \
+  && apk add --no-cache gcc musl-dev libffi-dev openssl-dev git git-fast-import graphviz \
+  && rm -rf /var/cache/apk/* \
+  && pip install --upgrade pip \
+  && pip install --no-cache-dir poetry
 
-RUN pip install --upgrade pip
+COPY pyproject.toml .
+COPY poetry.lock .
 
-RUN pip install pymdown-extensions \
-&& pip install mkdocs \
-&& pip install mkdocs-material \
-&& pip install mkdocs-rtd-dropdown \
-&& pip install mkdocs-git-revision-date-plugin \
-&& pip install mkdocs-git-revision-date-localized-plugin \
-&& pip install mkdocs-minify-plugin
+RUN poetry export -f requirements.txt --without-hashes | sed 's/-e //' >> /tmp/requirements.txt \
+  && pip install --no-cache-dir -r /tmp/requirements.txt
 
-ENTRYPOINT ["/usr/src/mkdocs/.local/bin/mkdocs"]
+COPY mkdocs.yml mkdocs.yml
+COPY docs docs
+COPY overrides overrides
+COPY .git .git
 
-CMD ["serve", "-a", "0.0.0.0:8000"]
+RUN mkdocs build --strict
+
+FROM nginx:stable-alpine as release
+COPY --from=build /build/site/ /usr/share/nginx/html/
+EXPOSE 8080
