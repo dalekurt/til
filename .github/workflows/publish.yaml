@@ -34,9 +34,9 @@ jobs:
         run: |
           curl -sSL ${{ env.POETRY_URL }} | python - --version ${{ env.POETRY_VERSION }}
           echo "$HOME/.local/bin" >> $GITHUB_PATH
+      - name: Create requirements.txt
+        run: poetry export -f requirements.txt --without-hashes | sed 's/-e //' >> /tmp/requirements.txt
       - name: Install Dependencies
-        run: poetry install
-      - name: Install MkDocs
-        run: poetry add mkdocs
+        run: pip install --no-cache-dir -r /tmp/requirements.txt
       - name: Deploy Github Pages 
-        run: poetry mkdocs gh-deploy --force --clean --verbose
+        run: mkdocs gh-deploy --force --clean --verbose
