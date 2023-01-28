@@ -95,6 +95,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Python: 
-    - Resources: resources.md
-  - GoLang: 
-    - Resources: resources.md
+    - Resources: python/resources.md
+  - Go: 
+    - Resources: go/resources.md

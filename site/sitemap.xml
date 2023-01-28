@@ -6,7 +6,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://til.dalekurtmurray.com/golang/resources/</loc>
+         <loc>https://til.dalekurtmurray.com/go/resources/</loc>
+         <lastmod>2023-01-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://til.dalekurtmurray.com/python/resources/</loc>
          <lastmod>2023-01-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
