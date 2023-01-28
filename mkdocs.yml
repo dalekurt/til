@@ -98,3 +98,7 @@ nav:
     - Resources: python/resources.md
   - Go: 
     - Resources: go/resources.md
+  - Git:
+    - Create empty branch on GitHub: git/create-empty-branch-on-github.md
+  - GitHub Actions:
+    - How to deploy MkDocs to GitHub Pages: github-actions/how-to-deploy-mkdocs-gh-pages.md
