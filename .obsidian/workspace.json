@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/python/resources.md",
+                "file": "docs/git/create-empty-branch-on-github.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/python/resources.md",
+                "file": "docs/git/create-empty-branch-on-github.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/python/resources.md",
+                "file": "docs/git/create-empty-branch-on-github.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/python/resources.md"
+                "file": "docs/git/create-empty-branch-on-github.md"
               }
             }
           }
@@ -148,7 +148,9 @@
   },
   "active": "54b0dc1d9aa425d9",
   "lastOpenFiles": [
-    "docs/go/resources.md",
-    "README.md"
+    "docs/git/create-empty-branch-on-github.md.md",
+    "README.md",
+    "docs/python/resources.md",
+    "docs/go/resources.md"
   ]
 }
