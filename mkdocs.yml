@@ -94,6 +94,10 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Kubernetes:
+    - How to remove nodes: kubernetes/remove-a-kubernetes-node.md
+  - Linux:
+    - Update hostname: linux: update-hostname.md
   - Python: 
     - Resources: python/resources.md
   - Go: 
