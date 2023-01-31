@@ -1,4 +1,4 @@
-FROM python:3.10.0-alpine3.14 as build
+FROM python:3.10.4-alpine3.14 as build
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
