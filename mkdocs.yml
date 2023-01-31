@@ -96,8 +96,9 @@ nav:
   - Home: index.md
   - Kubernetes:
     - How to remove nodes: kubernetes/remove-a-kubernetes-node.md
+    - Get Pods on Node: kubernetes/get-pods-on-node.md
   - Linux:
-    - Update hostname: linux: update-hostname.md
+    - Update hostname: linux/update-hostname.md
   - Python: 
     - Resources: python/resources.md
   - Go: 
