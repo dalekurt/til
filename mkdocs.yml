@@ -99,6 +99,8 @@ nav:
     - Get Pods on Node: kubernetes/get-pods-on-node.md
   - Linux:
     - Update hostname: linux/update-hostname.md
+  - Networking:
+    - Network Isolation on UniFi UDM Pro: networking/network-isolation-on-unifi.md
   - Python: 
     - Resources: python/resources.md
   - Go: 
@@ -107,3 +109,5 @@ nav:
     - Create empty branch on GitHub: git/create-empty-branch-on-github.md
   - GitHub Actions:
     - How to deploy MkDocs to GitHub Pages: github-actions/how-to-deploy-mkdocs-gh-pages.md
+  - Terraform:
+    - Target a specific resource: terraform/target-a-specific-resource.md
