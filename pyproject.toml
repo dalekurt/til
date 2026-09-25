@@ -7,7 +7,7 @@ authors = ["Dale-Kurt Murray <hello@dalekurtmurray>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 mkdocs-git-revision-date-localized-plugin = "0.10.0"
-mkdocs-material = {git = "https://github.com/squidfunk/mkdocs-material.git", tag = "8.2.7"}
+mkdocs-material = {git = "https://github.com/squidfunk/mkdocs-material.git", tag = "8.5.11"}
 mkdocs-graphviz = "1.5.3"
 mkdocs-minify-plugin = "^0.6.2"
 
